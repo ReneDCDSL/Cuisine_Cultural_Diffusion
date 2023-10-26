@@ -103,13 +103,13 @@ The dataset's shape is (39774, 3). Here is a view of its first few lines:
 There are 20 different cuisines and 39 774 unique meals. The dataset came clean and so no further adjustment were needed.
 Here is a pie plot showing the distribution of cuisines from the dataset: 
     
-![png](./img/posts/Cuisine/output_15_0.png)
+![png](img/posts/Cuisine/output_15_0.png)
     
 This dataset contains mostly Italian, Mexican, Southern US, Indian, Chinese & French recipes. It is not hard to guess that the data comes from an American website with such food influences. <br> 
 The recipes are not equally distributed among all regions but there still are at least 467 recipes for each region. 
 
   
-![png](./img/posts/Cuisine/output_18_0.png)
+![png](img/posts/Cuisine/output_18_0.png)
 
 We can see that among ingredients, spices and condiments appear very often, it is expected as they are fundamental ingredients in most recipes. We can also observe some ingredients that symbolic of some specific cuisines: lime juice, parmesan cheese, soy sauce, jalapeno chili, green onion... These ingredients are specific to some regions and so I expect them to be markers of cuisines. 
 
@@ -285,7 +285,7 @@ The number of clusters was set arbitrarily to get a first sense of the data. Loo
 
 #### Elbow Method
 
-![png](./img/posts/Cuisine/output_49_0.png)
+![png](img/posts/Cuisine/output_49_0.png)
     
 
 The Elbow method advises us to pick a number of clusters which is not too big but still encompasses enough dissimilarity between them. With this method, we should choose a number that sits in the angle of the curve. Here, the curve does not have a very sharp angle, I would take a value between 5 and 10 clusters. 
@@ -346,7 +346,7 @@ Here we will use it for the latter purpose. We start with 3010 features which re
 Here we apply PCA on our whole dataset, keeping only the 2 principal components. This allows us to plot all the recipes according to a graph with axis representing the 2 principal components:
 
    
-![png](./img/posts/Cuisine/output_69_0.png)
+![png](img/posts/Cuisine/output_69_0.png)
     
 
 The recipes are globally well packed up, although we can see some distinct regions (pink squares at the bottom, turquoise hexagons at the top). One great thing is that, from the few clusters we can see, they seem to not have too large intra-cluster variance, we can see clear grouping of them. We could try to reduce the number of cuisines to see clearer separations.
@@ -359,7 +359,7 @@ The recipes are globally well packed up, although we can see some distinct regio
 Here I arbitrarily chose to  focus on Japanese, Greek, Russian & Cajun/Creole cuisines to better observe separation between points.
 
     
-![png](./img/posts/Cuisine/output_73_0.png)
+![png](img/posts/Cuisine/output_73_0.png)
 
 
 From this second graph, we can observe more distinction between the cuisines. There are still some heavy overlapping in the middle-left part of the graph, but they all seem to diverge in a different direction. Japanese cuisine tend to have a higher degree of the 2nd principal component, while Greek and Cajun/Creole have on average a higher amount of the 1st principal component. 
@@ -372,7 +372,7 @@ To reduce the noise in these graphs and get another view of the resulting PCA mo
 #### Centroids
 
     
-![png](./img/posts/Cuisine/output_76_0.png)
+![png](img/posts/Cuisine/output_76_0.png)
     
 
 This centroid plot is much easier to read. We can see some clusters of cuisines emerging. For example, the 4 points at the very top are Chinese, Korean, Thai & Vietnamese cuisines, which are regionally very close. Japanese and Filipino cuisines are not too far from the first 4, but with each their own offset on the graph. On the bottom left we can see British, Irish, Russian, Southern_us and French cuisine making another cluster of European meals. On the bottom middle right part, another cluster is formed with Italian, Mexican, Indian, Spanish, Greek, Jamaican, Cajun/Creole, and a bit further, Moroccan cuisines. These are a mix of countries with cuisine full of spices and Mediterranean countries. A common ingredient shared by these countries could be the tomato. <br>
@@ -388,7 +388,7 @@ Another way to look at our PCA results is to look at the way ingredients were cl
 Since there are a lot of ingredients in our corpus, we won't be able to plot them all. To get ingredients with various polarity, I will just extract several elements with the highest and lowest values for each of the 2 principal components.
 
     
-![png](./img/posts/Cuisine/output_82_0.png)
+![png](img/posts/Cuisine/output_82_0.png)
     
 
 
@@ -405,7 +405,7 @@ Our simple 2 dimensional PCA model has been working great. However, we don't kno
 Here I plot the cumulative explained variance for all k combination of principal components.
 
     
-![png](./img/posts/Cuisine/output_87_1.png)
+![png](img/posts/Cuisine/output_87_1.png)
 
 
 This curve represent the amount of variance a PCA with k components would contain. We can see a very sharp curve, increasing very fast on the first few several hundreds of components, before curving horizontally. This means that a model that would have 500 principal components would contain almost 95% of the variance coming from all ingredients. Unfortunately, we can see that a model with just 2 principal components does not carry a majority of the total variance.
