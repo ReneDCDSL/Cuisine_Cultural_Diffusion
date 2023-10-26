@@ -95,8 +95,11 @@ The dataset's shape is (39774, 3). Here is a view of its first few lines:
 
 There are 20 different cuisines and 39 774 unique meals. The dataset came clean and so no further adjustment were needed.
 Here is a pie plot showing the distribution of cuisines from the dataset: 
-    
-![png](/img/README/output_15_0.png)
+
+<p align="center">
+  <img src="/img/README/output_15_0.png" />
+</p>
+
     
 This dataset contains mostly Italian, Mexican, Southern US, Indian, Chinese & French recipes. It is not hard to guess that the data comes from an American website with such food influences. <br> 
 The recipes are not equally distributed among all regions but there still are at least 467 recipes for each region. 
