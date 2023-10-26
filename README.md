@@ -1,6 +1,9 @@
 # Cuisine Cultural Diffusion Analysis
 
 
+![png](/img/food-from-around-the-world.jpg)
+
+
 <a name="introduction"></a>
 
 <br>
