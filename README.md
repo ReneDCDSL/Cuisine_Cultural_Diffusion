@@ -46,16 +46,6 @@ To achieve this clustering effort, I have found a collection of pairs of recipe 
 The dataset's shape is (39774, 3). Here is a view of its first few lines:
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-</style>
 <table border="1" class="dataframe">
   <thead style="text-align: center;">
     <tr>
@@ -126,15 +116,6 @@ In this part, we will apply some text vectorizing tools so that further algorith
 We first start by changing the lists of ingredients to a set of strings.
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: center;">
